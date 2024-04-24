@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Select</title>
+</head>
+
+<body>
+    <div>
+        <select name="" id="disc-id" class="inp-disc">
+            <option value="0">-- escolha --</option>
+            <option value="1">CÁLCULO</option>
+            <option value="2">LÓGICA</option>
+            <option value="3">GEOMETRIA</option>
+            <option value="4">FÍSICA</option>
+            <option value="5">COMPILADORES</option>
+        </select>
+    </div>
+
+    <script>
+        function selecionar(valor) {
+            let select = document.getElementById('disc-id');
+            for (var i = 0; i < select.options.length; i++) {
+                if (select.options[i].value == valor) {
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+        selecionar("2");
+    </script>
+</body>
+
+</html>
