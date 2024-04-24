@@ -74,9 +74,6 @@ public class ControllerServlet extends HttpServlet {
 	}
 
 	private void poeDadosNaSessao(HttpSession session) {
-		Db db = Db.getInstance();
-//		ArrayList<AulaDto> lista = db.findAll();
-//		session.setAttribute("lista", lista);
 		/*
 		 *  Aqui, você consulta o banco de dados obtendo uma instância da classe
 		 *  (singleton) Db. Com ela, você pode obter uma lista com todos os dto's contendo
@@ -86,15 +83,12 @@ public class ControllerServlet extends HttpServlet {
 	}
 
 	private void reset() {
-		Db db = Db.getInstance();
-//		db.reset();
 		/*
 		 * 	Aqui, você restaura os valores default no banco de dados (para efeito de testes)
 		 */
 	}
 
 	private void create(HttpServletRequest request) {
-		Db db = Db.getInstance();
 		/*
 		 * 	Primeiro, você recupera (de request) os parâmetros enviados via AJAX, que são:
 		 * 	- codDisciplina,
@@ -107,9 +101,6 @@ public class ControllerServlet extends HttpServlet {
 	}
 
 	private void delete(HttpServletRequest request) {
-//		String id = request.getParameter("id");
-		Db db = Db.getInstance();
-//		db.delete(id);
 		/*
 		 * 	Recupere (de request) o parâmetro id e o use para remover a aula do banco de dados.
 		 */
