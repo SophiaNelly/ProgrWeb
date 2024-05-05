@@ -18,9 +18,10 @@ public class Aula implements Serializable {
 	}
 
 	public Aula(AulaDto dto) {
-		this.codDisciplina = Integer.parseInt(dto.codDisciplina);
+		this.id = dto.id.equals("") ? null : Long.parseLong(dto.id);
+		this.codDisciplina = dto.codDisciplina.equals("") ? 0 : Integer.parseInt(dto.codDisciplina);
 		this.assunto = dto.assunto;
-		this.duracao = Integer.parseInt(dto.duracao);
+		this.duracao = dto.duracao.equals("") ? 0 : Integer.parseInt(dto.duracao);
 		this.data = dto.data;
 		this.horario = dto.horario;
 	}
